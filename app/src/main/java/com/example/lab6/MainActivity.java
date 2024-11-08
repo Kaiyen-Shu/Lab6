@@ -82,9 +82,9 @@ public class MainActivity extends AppCompatActivity {
         Data[] cubeeData = new  Data[cubeeNameArray.length];
 
         for(int i = 0 ; i< cubeeData.length; i++){
-            transData[i] = new Data();
-            transData[i].name = cubeeNameArray[i];
-            transData[i].photo = cubeePhotoIdArray[i];
+            cubeeData[i] = new Data();
+            cubeeData[i].name = cubeeNameArray[i];
+            cubeeData[i].photo = cubeePhotoIdArray[i];
         }
 
         MyAdapter cubeeAdapter = new MyAdapter(cubeeData,R.layout.cubee_list);
@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
 
         String[] messageArray = new String[]{"訊息1","訊息2","訊息3","訊息4","訊息5","訊息6"};
 
-        ArrayAdapter<String> messageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1);
+        ArrayAdapter<String> messageAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,messageArray);
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(messageAdapter);
     }
